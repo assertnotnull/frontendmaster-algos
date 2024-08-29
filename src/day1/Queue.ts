@@ -4,14 +4,11 @@ type Node<T> = {
 };
 
 export default class Queue<T> {
-    public length: number;
+    public length = 0;
     private head?: Node<T>;
     private tail?: Node<T>;
 
-    constructor() {
-        this.head = this.tail = undefined;
-        this.length = 0;
-    }
+    constructor() {}
 
     enqueue(item: T): void {
         const node = { value: item } as Node<T>;

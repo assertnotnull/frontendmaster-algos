@@ -8,20 +8,20 @@ function qs(arr: number[], lo: number, hi: number) {
 
 function partition(arr: number[], lo: number, hi: number) {
     const pivot = arr[hi];
-    let i = lo - 1;
+    let idx = lo - 1;
     for (let j = lo; j < hi; j++) {
         if (arr[j] < pivot) {
-            i++;
-            const temp = arr[i];
-            arr[i] = arr[j];
+            idx++;
+            const temp = arr[idx];
+            arr[idx] = arr[j];
             arr[j] = temp;
         }
     }
-    i++;
-    arr[hi] = arr[i];
-    arr[i] = pivot;
+    idx++;
+    arr[hi] = arr[idx];
+    arr[idx] = pivot;
 
-    return i;
+    return idx;
 }
 
 export default function quick_sort(arr: number[]): void {
