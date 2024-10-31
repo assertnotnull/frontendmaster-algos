@@ -6,6 +6,7 @@ function letterCombination(n: number) {
             return;
         }
         for (const l of "abc") {
+            console.log({ l, path });
             path.push(l);
             dfs(n, res, path);
             path.pop();
